@@ -36,4 +36,4 @@ Pesquisa:
 https://forms.gle/qzcD6s9tuAZb8YVY6
 
 Backlog:
-https://docs.google.com/spreadsheets/d/1VJkqLtXWqfcLzGwX20a-Uahm-YmtyIpr/edit?gid=1595306312#gid=1595306312
+https://docs.google.com/spreadsheets/d/1VJkqLtXWqfcLzGwX20a-Uahm-YmtyIpr/edit?usp=sharing&ouid=116552123004327387960&rtpof=true&sd=true
