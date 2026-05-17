@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>{% block titulo %}{% endblock %}</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<header>
+
+    <h1>SGO Motos</h1>
+
+    <nav>
+
+        <a href="/">Início</a>
+
+        {% if "usuario" not in session %}
+
+            <a href="/login">Login</a>
+
+            <a href="/cadastro">Cadastro</a>
+
+      {% else %}
+
+    <a href="/cliente">Cliente</a>
+
+    {% if session["tipo"] == "admin" %}
+
+        <a href="/admin">Admin</a>
+
+        <a href="/usuarios">Usuários</a>
+
+        <a href="/motos">Motos</a>
+
+    {% endif %}
+
+    <a href="/ordens">Ordens</a>
+
+    <a href="/logout">Sair</a>
+
+{% endif %}
+
+    </nav>
+
+</header>
+
+<main>
+
+{% block conteudo %}
+{% endblock %}
+
+</main>
+
+</body>
+</html>

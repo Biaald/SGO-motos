@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Motos
+{% endblock %}
+
+{% block conteudo %}
+
+<h2>Motos Registradas</h2>
+
+<div class="grid">
+
+{% for moto in motos %}
+
+<div class="card">
+
+    <h3>{{ moto.modelo }}</h3>
+
+    <p>Usuário: {{ moto.usuario }}</p>
+
+    <p>Marca: {{ moto.marca }}</p>
+
+    <p>Placa: {{ moto.placa }}</p>
+
+    <p>Ano: {{ moto.ano }}</p>
+
+    <div class="acoes">
+
+        <a href="/remover_moto/{{ moto.id }}">
+
+            Remover
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

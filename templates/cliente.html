@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Cliente
+{% endblock %}
+
+{% block conteudo %}
+
+<h2>Área do Cliente</h2>
+
+<div class="form-box">
+
+<h3>Registrar Moto</h3>
+
+<form method="POST" action="/registrar_moto">
+
+    <input
+    type="text"
+    name="modelo"
+    placeholder="Modelo"
+    required>
+
+    <input
+    type="text"
+    name="marca"
+    placeholder="Marca"
+    required>
+
+    <input
+    type="text"
+    name="placa"
+    placeholder="Placa"
+    required>
+
+    <input
+    type="text"
+    name="ano"
+    placeholder="Ano"
+    required>
+
+    <button type="submit">
+
+        Registrar Moto
+
+    </button>
+
+</form>
+
+</div>
+
+<h2>Minhas Motos</h2>
+
+<div class="grid">
+
+{% for moto in motos %}
+
+<div class="card">
+
+    <h3>{{ moto.modelo }}</h3>
+
+    <p>Marca: {{ moto.marca }}</p>
+
+    <p>Placa: {{ moto.placa }}</p>
+
+    <p>Ano: {{ moto.ano }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<h2>Peças Disponíveis</h2>
+
+<div class="grid">
+
+{% for produto in produtos %}
+
+<div class="card">
+
+    <h3>{{ produto.nome }}</h3>
+
+    <p>Quantidade: {{ produto.quantidade }}</p>
+
+    <p>Preço: R$ {{ produto.preco }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
