@@ -30,7 +30,7 @@ O SGO-Motos é um sistema web desenvolvido com o objetivo de melhorar a organiza
 ## Links
 
 Protótipo:
-https://greet-scout-54696011.figma.site/
+https://greet-scout-54696011.figma.site
 
 Pesquisa:
 https://forms.gle/qzcD6s9tuAZb8YVY6
